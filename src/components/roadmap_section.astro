@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import { Activity, Anchor, BadgeCheck, Shield, User } from "lucide-react";
+
+import planningSteps from "@/assets/planning-steps.png";
+import MotionSection from "@/components/ui/motion_section";
+
+const steps = [
+  {
+    icon: Shield,
+    step: "Passo 1",
+    desc: "Introdução ao posicionamento para o segundo semestre e como se preparar.",
+  },
+  {
+    icon: Activity,
+    step: "Passo 2",
+    desc: "Estratégias práticas para gerar valor e atrair clientes ideais.",
+  },
+  {
+    icon: Anchor,
+    step: "Passo 3",
+    desc: "Execução de ações consistentes para bater as metas do ano.",
+  },
+  {
+    icon: User,
+    step: "Passo 4",
+    desc: "Refinamento de imagem pessoal e presença digital.",
+  },
+  {
+    icon: BadgeCheck,
+    step: "Encerramento",
+    desc: "Planejamento final para encerrar o ano com resultados de alto impacto.",
+  },
+];
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-20'>
+    <div
+      class='flex flex-col-reverse items-center justify-center gap-16 mx-auto max-w-7xl md:flex-row'
+    >
+      <div class='flex flex-col w-full max-w-md'>
+        {
+          steps.map(({ icon: Icon, step, desc }, idx) => (
+            <div class='relative flex pb-10 last:pb-0'>
+              <div class='absolute inset-0 flex items-center justify-center w-10 h-full'>
+                {idx !== 4 && <div class='w-1 h-full bg-muted/30' />}
+              </div>
+
+              <div class='relative z-10 flex items-center justify-center flex-shrink-0 w-10 h-10 text-white rounded-full shadow-md bg-gradient-to-br from-violet-500 to-purple-600'>
+                <Icon className='w-5 h-5' />
+              </div>
+
+              <div class='flex-grow pl-6 text-left'>
+                <h3 class='text-sm font-bold tracking-wide uppercase text-muted-foreground'>
+                  {step}
+                </h3>
+                <p class='mt-1 text-sm leading-relaxed text-zinc-300'>{desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class='flex-1 w-full max-w-2xl'>
+        <Image
+          src={planningSteps}
+          alt='Passos para alcançar o sucesso'
+          class='object-cover w-full h-full shadow-lg rounded-xl'
+        />
+      </div>
+    </div>
+  </section>
+</MotionSection>

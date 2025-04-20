@@ -1,0 +1,69 @@
+---
+import { Check, X } from "lucide-react";
+import MotionSection from "./ui/motion_section";
+
+const withoutWorkshop = [
+  "Não temos tempo para você ficar atento",
+  "Você não tem tempo para se preparar",
+  "Você não tem tempo para se apresentar",
+  "Você não tem tempo para se orientar",
+];
+
+const withWorkshop = [
+  "Você tem tempo para ficar atento",
+  "Você tem tempo para se preparar",
+  "Você tem tempo para se apresentar",
+  "Você tem tempo para se orientar",
+];
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-20'>
+    <div class='flex flex-col items-center justify-center max-w-5xl gap-16 mx-auto text-center'>
+      <h2 class='heading-section'>
+        Que tal fechar um 2024 de um jeito ainda melhor do que o planejado?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-stretch">
+        
+        <div class='flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border shadow-lg rounded-2xl border-zinc-300'>
+          <div class='p-6 bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900'>
+            <h3 class='text-lg font-extrabold tracking-tight text-white uppercase'>
+              Sem o Workshop
+            </h3>
+          </div>
+          <ul class='flex flex-col items-start gap-4 p-6 text-zinc-700 body-text'>
+            {
+              withoutWorkshop.map((item) => (
+                <li class='flex items-center gap-3 text-start'>
+                  <X className='w-5 h-5 text-red-500 shrink-0' />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <X className='hidden w-18 h-18 md:block text-zinc-400 shrink-0 self-center' />
+
+        <div class='flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border shadow-lg rounded-2xl border-zinc-300'> 
+          <div class='p-6 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800'>
+            <h3 class='text-lg font-extrabold tracking-tight text-white uppercase'>
+              Com o Workshop
+            </h3>
+          </div>
+          <ul class='flex flex-col items-start gap-4 p-6 text-zinc-700 body-text'>
+            {
+              withWorkshop.map((item) => (
+                <li class='flex items-center gap-3'>
+                  <Check className='w-5 h-5 text-emerald-500 shrink-0' />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</MotionSection>

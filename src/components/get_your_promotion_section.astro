@@ -1,0 +1,40 @@
+---
+import laptopMockup from "@/assets/laptop-mockup.png";
+import MotionSection from "@/components/ui/motion_section";
+import { Image } from "astro:assets";
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-20'>
+    <div class='flex flex-col items-center justify-center gap-16 mx-auto max-w-7xl'>
+      <div class='w-72 h-72'>
+        <Image
+          src={laptopMockup}
+          alt='Mockup de laptop'
+          class='object-cover w-full rounded-lg shadow-lg'
+        />
+      </div>
+
+      <div class='flex flex-col items-center max-w-3xl text-center'>
+        <h2 class='heading-section'>
+          Segundo semestre do ano é o MAIS lucrativo para quem vende com
+          encantamento.
+        </h2>
+
+        <p class='mt-6 space-y-4 text-lg leading-relaxed body-text text-zinc-300'>
+          É exatamente isso que você leu: o segundo semestre — e principalmente
+          os últimos meses — são os melhores para alavancar os lucros da sua
+          empresa e ultrapassar metas com a venda de mentorias, serviços e
+          produtos de médio a alto valor.<br /><br />
+          Isso acontece porque as pessoas estão emocionalmente mais tendenciosas
+          a ir atrás de soluções pontuais e destinadas ao que elas buscam – e eu
+          vou te ensinar a SER essa solução para seu potencial cliente.<br /><br
+          />
+          Iremos mapear, planejar e executar as ações necessárias para você ultrapassar
+          as metas que havia planejado para fechar com chave de ouro (ou melhor dizendo,
+          de prata) o seu ano de 2025.
+        </p>
+      </div>
+    </div>
+  </section>
+</MotionSection>
