@@ -1,89 +1,73 @@
 ---
 import "../styles/global.css";
+
 const {
-  title = "Mentoria de Carreira para Devs | Com Kamila Santos",
+  title = "Mentoria de Carreira para Devs | Kamila Santos",
   description = "Mentoria prática para programadores que querem acelerar sua carreira e se destacar com posicionamento e autoridade digital.",
 } = Astro.props;
 ---
 
-<html lang='pt-BR' class='text-zinc-100'>
+<html lang="pt-BR" class="text-zinc-100">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='theme-color' content='#9333ea' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta name='description' content={description} />
-    <meta
-      name='keywords'
-      content='mentoria, carreira, dev, programador, mentor, mentoria de carreira, mentoria para devs, mentoria para programadores, mentoria para carreira, mentoria para desenvolvedores, mentoria para devs, mentoria para programadores, carreira para devs, carreira para programadores, dev para mentor, programador para mentor, carreira para mentor, desenvolvedor para mentor, dev para carreira, programador para carreira, dev para carreira, programador para carreira'
-    />
-    <meta name='author' content='Kamila Santos' />
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="mentoria, carreira, dev, programador, mentor, mentoria de carreira, mentoria para devs, mentoria para programadores, mentoria para carreira, mentoria para desenvolvedores, mentoria para devs, mentoria para programadores, carreira para devs, carreira para programadores, dev para mentor, programador para mentor, carreira para mentor, desenvolvedor para mentor, dev para carreira, programador para carreira" />
+    <meta name="author" content="Kamila Santos" />
 
-    <meta name='apple-mobile-web-app-capable' content='yes' />
-    <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-    <meta name='apple-mobile-web-app-title' content='Kamila Santos' />
-    <meta name='application-name' content='Kamila Santos' />
-    <meta name='msapplication-TileColor' content='#9333ea' />
-    <meta name='msapplication-config' content='/browserconfig.xml' />
-    <meta name='theme-color' content='#9333ea' />
+    <!-- PWA / Mobile -->
+    <meta name="theme-color" content="#9333ea" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Kamila Santos" />
+    <meta name="application-name" content="Kamila Santos" />
+    <meta name="msapplication-TileColor" content="#9333ea" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
-    <meta property='og:type' content='website' />
-    <meta property='og:title' content={title} />
-    <meta property='og:description' content={description} />
-    <!-- TODO: Adicionar URL -->
-    <meta property='og:url' content='https://mentoria.kamilasantos.dev/' />
-    <!-- TODO: Adicionar URL -->
-    <meta property='og:image' content='/public/og-image.png"' />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://mentoria.kamilasantos.dev/" />
+    <meta property="og:image" content="/public/og-image.png" />
 
-    <meta name='twitter:card' content='summary_large_image' />
-    <meta name='twitter:title' content={title} />
-    <meta name='twitter:description' content={description} />
-    <!-- todo: adicionar URL -->
-    <meta name='twitter:url' content='ttps://mentoria.kamilasantos.dev/' />
-    <!-- todo: adicionar URL -->
-    <meta name='twitter:image' content='/public/og-image.png' />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content="https://mentoria.kamilasantos.dev/" />
+    <meta name="twitter:image" content="/public/og-image.png" />
 
     <!-- Fontes -->
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap'
-      rel='stylesheet'
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link rel='canonical' href='https://mentoria.kamilasantos.dev/' />
-    <link rel='icon' href='/favicon.ico' type='image/x-icon' />
-    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-    <link rel='icon' type='image/png' sizes='48x48' href='/favicon-48x48.png' />
-    <link rel='icon' type='image/png' sizes='64x64' href='/favicon-64x64.png' />
-    <link rel='icon' type='image/png' sizes='96x96' href='/favicon-96x96.png' />
-    <link
-      rel='icon'
-      type='image/png'
-      sizes='128x128'
-      href='/favicon-128x128.png'
-    />
-    <link
-      rel='icon'
-      type='image/png'
-      sizes='256x256'
-      href='/favicon-256x256.png'
-    />
+    <link rel="canonical" href="https://mentoria.kamilasantos.dev/" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png" />
 
-    <link rel='sitemap' href='/sitemap.xml' />
-    <link rel='manifest' href='/manifest.webmanifest' />
-    <title>{title}</title>
+    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <title>{title ?? "Mentoria de Carreira para Devs | Kamila Santos"}</title>
   </head>
-  <body class='flex flex-col min-h-screen font-sans text-zinc-100 bg-soft-dark'>
-    <main class='relative flex-grow overflow-x-hiddenflex'>
+
+  <body class="flex flex-col min-h-screen font-sans text-zinc-100 bg-soft-dark">
+    <main class="relative flex flex-col flex-grow overflow-x-hidden">
       <slot />
     </main>
 
-    <!-- Footer -->
-    <footer class='py-6 text-sm text-center text-zinc-500'>
-      © {new Date().getFullYear()} Kamila Santos - KamilaCode® — Todos os direitos
-      reservados
+    <footer class="py-6 text-sm text-center text-zinc-500">
+      © {new Date().getFullYear()} Kamila Santos - KamilaCode® — Todos os direitos reservados
     </footer>
   </body>
 </html>

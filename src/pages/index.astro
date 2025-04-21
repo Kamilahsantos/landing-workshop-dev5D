@@ -1,23 +1,32 @@
 ---
-import Layout from "@/layouts/main.astro";
+import Layout from '@/layouts/main.astro';
+import {
+  ComparisonSection,
+  ContentSection,
+  HeaderSection,
+  HeroSection,
+  HowItWorksSection,
+  MentoraBio,
+  PillarsSection,
+  PromotionHighlightSection,
+  RoadmapSection,
+  TestimonialsSection,
+  TicketOptionsSection,
+} from '@/sections';
 
-import AdvantagesSection from "@/components/advantages_section.astro";
-import ContentSection from "@/components/content_section.astro";
-import GetYourPromotionSection from "@/components/get_your_promotion_section.astro";
-import Header from "@/components/header.astro";
-import Hero from "@/components/hero.astro";
-import HowItWorksSection from "@/components/how_it_works_section.astro";
-import RoadmapSection from "@/components/roadmap_section.astro";
-import ChronogramSection from "@/components/chronogram_section.astro";
+import {} from '@/sections';
 ---
 
 <Layout>
-  <Header />
-  <Hero />
+  <HeaderSection />
+  <HeroSection />
   <ContentSection />
-  <GetYourPromotionSection />
+  <PromotionHighlightSection />
   <HowItWorksSection />
-  <AdvantagesSection />
+  <ComparisonSection />
   <RoadmapSection />
-  <ChronogramSection />
+  <PillarsSection />
+  <TestimonialsSection />
+  <TicketOptionsSection />
+  <MentoraBio />
 </Layout>
