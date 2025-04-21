@@ -14,7 +14,9 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   site: "https://mentoria.kamilasantos.dev", // todo: colocar o link do site
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    imageService: true,
+  }),
   image: {
     remotePatterns: [{ protocol: "https" }],
   }
