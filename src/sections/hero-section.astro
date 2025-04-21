@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+
+import CardHero from '@/components/ui/CardHero';
+import MainButton from '@/components/ui/MainButton';
+import MotionSection from '@/components/ui/MotionSection';
+
+import { Calendar, MonitorPlay, Video } from 'lucide-react';
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-20 mt-20 text-white lg:py-32'>
+    <div
+      class='flex flex-col items-center justify-center gap-10 mx-auto max-w-7xl lg:flex-row md:gap-6'
+    >
+      <div class='max-w-xl'>
+        <h1 class='tracking-tight heading-hero text-neutral-700'>
+          <span class='block text-neutral-500'>Workshop</span>
+          <span class='block text-white'>Dev 5D</span>
+        </h1>
+
+        <h2 class='mt-6 text-left subheading-hero md:text-justify text-zinc-200'>
+          Mentoria prática para programadores que querem acelerar sua carreira e se destacar com
+          posicionamento e autoridade digital.
+        </h2>
+
+        <p class='mt-2 text-left body-text md:text-justify'>
+          Durante a imersão, você vai aprender como unir expertise técnica e inteligência de
+          posicionamento para acelerar sua carreira, conquistar as vagas mais disputadas e se tornar
+          uma autoridade no mercado de tecnologia ainda em 2025.
+        </p>
+
+        <div class='mt-6'>
+          <MainButton>
+            <span class='button-text'>Começar</span>
+          </MainButton>
+        </div>
+
+        <div class='flex justify-center gap-4 mt-6 md:justify-start'>
+          <CardHero text='Sala exclusiva no Zoom com vagas limitadas' icon={Video} />
+          <CardHero text='Sala exclusiva no Zoom com vagas limitadas' icon={Calendar} />
+          <CardHero text='Sala exclusiva no Zoom com vagas limitadas' icon={MonitorPlay} />
+        </div>
+      </div>
+
+      <div class='relative max-w-lg md:w-1/2'>
+        <div class='absolute inset-0 z-0 scale-110 bg-purple-500 rounded-full blur-2xl opacity-20'>
+        </div>
+        <!-- <img
+          src="https://avatars.githubusercontent.com/u/32311268?v=4"
+          alt="Imagem da Mentora"
+          class="relative z-10 self-center object-cover rounded-full shadow-xl"
+        /> -->
+        <Image
+          src='https://avatars.githubusercontent.com/u/32311268?v=4'
+          alt='Imagem da Mentora'
+          class='relative z-10 self-center object-cover rounded-full shadow-xl'
+          width={379}
+          height={379}
+        />
+      </div>
+    </div>
+  </section>
+</MotionSection>

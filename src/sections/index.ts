@@ -1,0 +1,11 @@
+export { default as ComparisonSection } from "./comparison-section.astro";
+export { default as PillarsSection } from "./pillars-section.astro";
+export { default as ContentSection } from "./content-section.astro";
+export { default as HeaderSection } from "./header-section.astro";
+export { default as HeroSection } from "./hero-section.astro";
+export { default as HowItWorksSection } from "./how-it-works-section.astro";
+export { default as PromotionHighlightSection } from "./promotion-highlight-section.astro";
+export { default as RoadmapSection } from "./roadmap-section.astro";
+export { default as MentoraBio } from "./mentora-bio.astro";
+export { default as TestimonialsSection } from "./testimonials-section.astro";
+export { default as TicketOptionsSection } from "./ticket-options-section.astro";

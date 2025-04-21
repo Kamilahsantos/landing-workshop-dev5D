@@ -1,0 +1,31 @@
+---
+import { MotionSection, TicketCard } from '@/components/ui';
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-20'>
+    <div class='flex flex-col items-center justify-center max-w-5xl gap-16 mx-auto text-center'>
+      <h2 class='heading-section'>Faça a sua escolha</h2>
+    </div>
+
+    <div class='flex flex-col items-center justify-center gap-8 mt-16 lg:flex-row lg:gap-16'>
+      <TicketCard
+        title='Ingresso Padrão'
+        type='Online'
+        benefits={['Acesso completo à imersão', 'Material complementar', 'Grupo exclusivo']}
+        variant='default',
+        price='$299',
+        link='https://www.google.com'
+      />
+      <TicketCard
+        title='Ingresso VIP'
+        type='Online + Bônus Exclusivos'
+        benefits={['Tudo do ingresso padrão', 'Mentoria personalizada', 'Sessão de Q&A privada']}
+        variant='vip',
+        price='$399'
+        link="https://www.google.com"
+        badge='VIP'
+      />
+    </div>
+  </section>
+</MotionSection>

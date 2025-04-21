@@ -1,0 +1,50 @@
+---
+import { MotionSection } from '@/components/ui';
+import { Image } from 'astro:assets';
+---
+
+<MotionSection client:visible>
+  <section class='px-6 py-24 text-white'>
+    <div class='max-w-3xl mx-auto text-center'>
+      <h2 class='mb-4 text-3xl font-bold'>Quem vai te orientar</h2>
+      <p class='max-w-xl mx-auto mb-10 text-base text-zinc-400'>
+        Uma mentora que já trilhou o caminho e pode encurtar o seu.
+      </p>
+
+      <div class='relative w-40 h-40 mx-auto mb-8'>
+        <div class='absolute inset-0 z-0 scale-110 bg-purple-500 rounded-full opacity-30 blur-2xl'>
+        </div>
+        <!-- <img
+          src='https://avatars.githubusercontent.com/u/32311268?v=4'
+          alt='Kamila Santos'
+          class='relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-zinc-800'
+        /> -->
+        <Image
+          src='https://avatars.githubusercontent.com/u/32311268?v=4'
+          alt='Kamila Santos'
+          class='relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-zinc-800'
+          width={379}
+          height={379}
+        />
+      </div>
+
+      <blockquote class='mb-6 text-lg italic leading-relaxed text-zinc-200'>
+        “Eu acredito que todo programador pode construir uma carreira de impacto — desde que tenha
+        clareza, estratégia e alguém que já tenha passado por isso ao lado.”
+      </blockquote>
+
+      <p class='max-w-xl mx-auto mb-6 text-base leading-relaxed text-zinc-300'>
+        Com mais de
+        <strong class='font-semibold text-white'>8 anos de experiência</strong>
+        em desenvolvimento e mentoria, já ajudei centenas de devs a se posicionarem com autoridade no
+        mercado, conquistarem oportunidades no Brasil e no exterior, e virarem a chave da carreira com
+        confiança.
+      </p>
+
+      <div class='mt-8'>
+        <p class='text-lg font-semibold text-white'>Kamila Santos</p>
+        <p class='text-sm text-zinc-400'>Mentora de Carreira e Posicionamento para Devs</p>
+      </div>
+    </div>
+  </section>
+</MotionSection>
