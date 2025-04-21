@@ -3,8 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,4 +15,7 @@ export default defineConfig({
   site: "https://mentoria.kamilasantos.dev", // todo: colocar o link do site
   output: "server",
   adapter: vercel(),
+  image: {
+    remotePatterns: [{ protocol: "https" }],
+  }
 });
