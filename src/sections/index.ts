@@ -6,6 +6,7 @@ export { default as HeroSection } from "./hero-section.astro";
 export { default as HowItWorksSection } from "./how-it-works-section.astro";
 export { default as PromotionHighlightSection } from "./promotion-highlight-section.astro";
 export { default as RoadmapSection } from "./roadmap-section.astro";
-export { default as MentoraBio } from "./mentora-bio.astro";
+export { default as MentorBioSection } from "./mentor-bio-section.astro";
 export { default as TestimonialsSection } from "./testimonials-section.astro";
 export { default as TicketOptionsSection } from "./ticket-options-section.astro";
+export { default as FAQSection } from "./faq-section.astro";
