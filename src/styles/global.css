@@ -183,7 +183,7 @@
     @apply font-semibold text-xs font-[var(--font-sans)];
   }
 
-  .ticket-shape::before,
+  /* .ticket-shape::before,
   .ticket-shape::after {
     content: "";
     position: absolute;
@@ -195,7 +195,7 @@
         rgba(0, 0, 0, 1) 100%);
     background-color: #0a0a0a;
     border-radius: 50%;
-    /* rotate: 45deg; */
+    rotate: 45deg;
     top: 34%;
     transform: translateY(-34%);
     z-index: 1;
@@ -207,5 +207,5 @@
 
   .ticket-shape::after {
     right: -10px;
-  }
+  } */
 }

@@ -35,7 +35,7 @@ const isHighlighted = variant === 'vip';
     <p class='text-sm font-semibold tracking-wider uppercase opacity-80'>{type}</p>
   </div>
 
-  <div class='w-full border-t-2 border-dashed border-zinc-900' />
+  <div class='w-full border-t-2 border-dashed border-zinc-900'></div>
 
   <ul class='flex flex-col items-start gap-4 my-8'>
     {
@@ -53,3 +53,32 @@ const isHighlighted = variant === 'vip';
     </MainButton>
   </div>
 </div>
+
+<style>
+  .ticket-shape::before,
+  .ticket-shape::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: radial-gradient(
+      circle at 120% 120%,
+      rgba(147, 51, 234, 0.15),
+      rgba(24, 24, 27, 1) 60%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-color: #0a0a0a;
+    border-radius: 50%;
+    top: 35%;
+    transform: translateY(-35%);
+    z-index: 1;
+  }
+
+  .ticket-shape::before {
+    left: -16px;
+  }
+
+  .ticket-shape::after {
+    right: -16px;
+  }
+</style>
