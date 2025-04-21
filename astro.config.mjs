@@ -18,6 +18,6 @@ export default defineConfig({
     imageService: true,
   }),
   image: {
-    remotePatterns: [{ protocol: "https" }],
+    remotePatterns: [{ protocol: "https", hostname: "avatars.githubusercontent.com" }],
   }
 });
