@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mentoria.kamilasantos.dev/sitemap.xml 
+Sitemap: https://workshop-dev-5d.vercel.app//sitemap.xml 
