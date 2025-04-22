@@ -19,15 +19,14 @@ const isHighlighted = variant === 'vip';
 
 <div
   class={`
-  relative flex flex-col items-stretch p-6 w-full max-w-md rounded-3xl shadow-md ticket-shape
-  ${
-    isHighlighted
-      ? 'bg-gradient-to-br from-violet-500 via-violet-700 to-violet-900 text-white shadow-lg'
+    relative flex flex-col items-stretch p-6 w-full max-w-md min-h-[620px] rounded-3xl shadow-md ticket-shape
+    ${isHighlighted 
+      ? 'bg-gradient-to-br from-violet-500 via-violet-700 to-violet-900 text-white shadow-lg' 
       : 'bg-gradient-to-br from-zinc-500 via-zinc-300 to-zinc-100 text-zinc-800 shadow-lg'
-  }
+    }
   `}
 >
-  <div class='flex flex-col items-center justify-center gap-1 mb-6'>
+  <div class='flex flex-col items-center justify-center gap-1 mb-4 p-0 min-h-[140px] lg:min-h-0 lg:mb-6'>
     <h3 class='text-2xl font-bold'>{title}</h3>
     <p class='text-lg font-extrabold tracking-tight'>
       {price}
@@ -40,7 +39,7 @@ const isHighlighted = variant === 'vip';
   <ul class='flex flex-col items-start gap-4 my-8'>
     {
       benefits.map((benefit) => (
-        <li class='flex items-center gap-3 text-sm'>
+        <li class='flex items-center gap-3 text-sm text-start lg:text-lg font-light'>
           <CheckIcon className='w-5 h-5 text-emerald-600 shrink-0' />
           <span>{benefit}</span>
         </li>
@@ -56,29 +55,36 @@ const isHighlighted = variant === 'vip';
 
 <style>
   .ticket-shape::before,
-  .ticket-shape::after {
-    content: '';
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-image: radial-gradient(
-      circle at 120% 120%,
-      rgba(147, 51, 234, 0.15),
-      rgba(24, 24, 27, 1) 60%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    background-color: #0a0a0a;
-    border-radius: 50%;
-    top: 35%;
-    transform: translateY(-35%);
-    z-index: 1;
-  }
+.ticket-shape::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: radial-gradient(
+    circle at 120% 120%,
+    rgba(147, 51, 234, 0.15),
+    rgba(24, 24, 27, 1) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  top: 135px; /* << Aqui está o pulo do gato */
+  transform: translateY(-50%);
+  z-index: 1;
+}
 
-  .ticket-shape::before {
-    left: -16px;
-  }
+.ticket-shape::before {
+  left: -16px;
+}
 
+.ticket-shape::after {
+  right: -16px;
+}
+@media (max-width: 768px) {
+  .ticket-shape::before,
   .ticket-shape::after {
-    right: -16px;
+    top: 180px; /* ajusta para versão menor */
   }
+}
 </style>
+
