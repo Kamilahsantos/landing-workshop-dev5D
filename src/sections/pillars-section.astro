@@ -1,9 +1,7 @@
 ---
-import { Image } from 'astro:assets';
 import { CircleChevronRight, MoveRight } from 'lucide-react';
 
 // import chronogram from "@/assets/pilares-mockup.svg";
-import chronogram from '../../public/assets/pilares-mockup.svg';
 import MotionSection from '@/components/ui/MotionSection';
 
 const firstPart = ['Soft Skills', 'Estratégia de Posicionamento e Personal Branding'];
@@ -30,11 +28,18 @@ const secondPart = [
         alt="Cronograma dos pilares"
         class="object-contain w-full h-auto max-w-4xl mx-auto shadow-lg rounded-xl"
       /> -->
-      <img
+      <!-- <img
         src='/assets/pilares.png'
         alt='Cronograma dos pilares'
         class='hidden object-contain w-full h-auto max-w-4xl mx-auto shadow-lg rounded-xl md:block'
-      />
+      /> -->
+      <div>
+        <h3 class='max-w-3xl subheading-section text-zinc-200'>
+          Os 3 Pilares para Construir uma Carreira de Impacto são
+          <strong>Posicionamento Estratégico</strong>,
+          <strong>Soft Skills</strong>, e <strong>Hard Skills</strong>.
+        </h3>
+      </div>
 
       <div class='grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center'>
         <div
@@ -81,3 +86,4 @@ const secondPart = [
     </div>
   </section>
 </MotionSection>
+
