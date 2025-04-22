@@ -1,65 +1,74 @@
 ---
-import { MotionSection } from "@/components/ui";
-import { Check, X } from "lucide-react";
+import { MotionSection } from '@/components/ui';
+import { Check, X } from 'lucide-react';
 
 const withoutWorkshop = [
-  "Não temos tempo para você ficar atento",
-  "Você não tem tempo para se preparar",
-  "Você não tem tempo para se apresentar",
-  "Você não tem tempo para se orientar",
+  'Sem plano e sem passo a passo, perdido no que executar',
+  'Insegurança e frustração por ver os meses e anos se passando e você sem ter nenhum avanço',
+  'Sobrecarga de demandas e rotinas exaustivas com salário abaixo do mercado',
+  'Confusão mental em meio à tanto conhecimento sem saber por onde ir para chegar no resultado',
 ];
 
 const withWorkshop = [
-  "Você tem tempo para ficar atento",
-  "Você tem tempo para se preparar",
-  "Você tem tempo para se apresentar",
-  "Você tem tempo para se orientar",
+  'Plano completo e prático para alcançar os 5 digitos de salário e acelerar sua carreira',
+  'Estratégias e caminhos para você se destacar e ser promovido',
+  'Preparação para entrevistas com exemplo prático ao vivo, de uma entrevistadora de devs',
+  'Clareza das estratégias  necessárias para se tornar disputado pelas empresas de modo mais leve, mais livre e mais lucrativo',
 ];
 ---
 
 <MotionSection client:visible>
-  <section class="px-6 py-20">
-    <div class="flex flex-col items-center justify-center max-w-5xl gap-16 mx-auto text-center">
-      <h2 class="heading-section">
-        Que tal fechar um 2024 de um jeito ainda melhor do que o planejado?
+  <section class='px-6 py-20'>
+    <div class='flex flex-col items-center justify-center max-w-5xl gap-16 mx-auto text-center'>
+      <h2 class='heading-section'>
+        Que tal alcançar o cargo de Sênior num prazo bem menor do que o planejado?
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-x-12 gap-y-8">
-        
-        <div class="flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border border-zinc-300 shadow-lg rounded-2xl">
-          <div class="p-6 bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900">
-            <h3 class="text-lg font-extrabold tracking-tight text-white uppercase">
+      <div class='grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-x-12 gap-y-8'>
+        <div
+          class='flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border border-zinc-300 shadow-lg rounded-2xl'
+        >
+          <div class='p-6 bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900'>
+            <h3 class='text-lg font-extrabold tracking-tight text-white uppercase'>
               Sem o Workshop
             </h3>
           </div>
-          <ul role="list" class="flex flex-col items-start gap-4 p-6 text-zinc-700 body-text">
-            {withoutWorkshop.map((item) => (
-              <li role="listitem" class="flex items-center gap-3 text-start">
-                <X className="w-5 h-5 text-red-500 shrink-0" aria-hidden="true" />
-                <span>{item}</span>
-              </li>
-            ))}
+          <ul role='list' class='flex flex-col items-start gap-4 p-6 text-zinc-700 body-text'>
+            {
+              withoutWorkshop.map((item) => (
+                <li role='listitem' class='flex items-center gap-3 text-start'>
+                  <X className='w-5 h-5 text-red-500 shrink-0' aria-hidden='true' />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
 
-        <X className="hidden w-18 h-18 md:block text-zinc-400 shrink-0 self-center" aria-hidden="true" />
+        <X
+          className='hidden w-18 h-18 md:block text-zinc-400 shrink-0 self-center'
+          aria-hidden='true'
+        />
 
-        <div class="flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border border-zinc-300 shadow-lg rounded-2xl">
-          <div class="p-6 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800">
-            <h3 class="text-lg font-extrabold tracking-tight text-white uppercase">
+        <div
+          class='flex flex-col w-full h-full max-w-sm overflow-hidden bg-white border border-zinc-300 shadow-lg rounded-2xl'
+        >
+          <div class='p-6 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800'>
+            <h3 class='text-lg font-extrabold tracking-tight text-white uppercase'>
               Com o Workshop
             </h3>
           </div>
-          <ul role="list" class="flex flex-col items-start gap-4 p-6 text-zinc-700 body-text">
-            {withWorkshop.map((item) => (
-              <li role="listitem" class="flex items-center gap-3 text-start">
-                <Check className="w-5 h-5 text-emerald-500 shrink-0" aria-hidden="true" />
-                <span>{item}</span>
-              </li>
-            ))}
+          <ul role='list' class='flex flex-col items-start gap-4 p-6 text-zinc-700 body-text'>
+            {
+              withWorkshop.map((item) => (
+                <li role='listitem' class='flex items-center gap-3 text-start'>
+                  <Check className='w-5 h-5 text-emerald-500 shrink-0' aria-hidden='true' />
+                  <span>{item}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
-
       </div>
     </div>
   </section>
