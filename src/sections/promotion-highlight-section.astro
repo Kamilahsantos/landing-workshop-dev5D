@@ -2,6 +2,7 @@
 import laptopMockup from '@/assets/laptop-mockup.png';
 import MotionSection from '@/components/ui/MotionSection';
 import { Image } from 'astro:assets';
+import MainButton from '@/components/ui/MainButton';
 ---
 
 <MotionSection client:visible>
@@ -22,27 +23,43 @@ import { Image } from 'astro:assets';
 
       <div class='flex flex-col items-center max-w-3xl text-left md:text-center'>
         <h2 class='heading-section'>
-          Esse momento do ano é o MAIS lucrativo para quem se posiciona com estratégia no mercado e
-          tem as skills que realmente importam.
+          Esse é o momento mais estratégico (e lucrativo) do ano para acelerar sua carreira no
+          mercado tech
         </h2>
 
         <div class='flex flex-col gap-4 mt-6 text-lg leading-relaxed body-text text-zinc-300'>
+          <b>
+            <p>Sim, é exatamente isso que você leu.</p>
+          </b>
           <p>
-            É exatamente isso que você leu: esse é o melhor momento para alavancar a sua carreira e
-            ultrapassar metas pessoais com melhor resultado em avaliações de performance, promoções
-            , aumentos e novas vagas que são abertas diariamente e faltam profissionais para elas.
+            Enquanto muitos profissionais estão apenas sobrevivendo à rotina e esperando a próxima
+            avaliação de desempenho, quem se antecipa, se posiciona com estratégia e desenvolve as
+            skills certas, sai na frente — e começa a colher os frutos já nos próximos meses.
           </p>
           <p>
-            Isso acontece porque as empresas estão cada vez mais subindo a régua e se você não
-            souber exatamente o que o mercado espera e ainda souber mas não se posicionar com
-            estratégia, você vai continuar estagnado ou pior, vai perder oportunidades.
+            💼 Promoções internas, <br />
+            💰 aumentos salariais, <br />
+            📈 metas ultrapassadas, <br />
+            💡 e novas vagas abertas todos os dias... <br />
+            Essas oportunidades estão aí — mas só para quem está preparado.
           </p>
           <p>
-            Iremos mapear, planejar e executar as ações necessárias para você ultrapassar as metas
-            que havia planejado para sua carreira e nos próximos meses alcançar seu cargo de sênior.
+            A régua do mercado subiu, e não basta mais saber programar: você precisa entender o
+            jogo, se destacar como um profissional completo e mostrar que é sênior na prática, não
+            só no papel.
+          </p>
+          <p>
+            No Workshop Dev 5D, vamos mapear, planejar e executar as ações que vão te tirar da
+            estagnação e te colocar no caminho direto para o cargo de sênior — de forma estratégica,
+            prática e lucrativa.
           </p>
         </div>
       </div>
+    </div>
+    <div class='mt-6'>
+      <MainButton href='#pillars-section'>
+        <span class='button-text'>Quero virar dev sênior mais rápido</span>
+      </MainButton>
     </div>
   </section>
 </MotionSection>
