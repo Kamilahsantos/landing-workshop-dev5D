@@ -11,7 +11,7 @@ import { Calendar, MonitorPlay, Video } from 'lucide-react';
 <MotionSection client:visible>
   <section class='px-6 py-20 mt-20 text-white lg:py-32'>
     <div
-      class='flex flex-col items-center justify-center gap-10 mx-auto max-w-7xl lg:flex-row md:gap-6'
+      class='flex flex-col items-center justify-around gap-10 mx-auto max-w-7xl lg:flex-row lg:gap-12'
     >
       <div class='max-w-xl'>
         <h1 class='tracking-tight heading-hero text-neutral-700'>
@@ -37,14 +37,15 @@ import { Calendar, MonitorPlay, Video } from 'lucide-react';
           </MainButton>
         </div>
 
-        <div class='flex justify-center gap-4 mt-6 md:justify-start'>
+        <!-- <div class='flex justify-center gap-4 mt-6 md:justify-start'> -->
+        <div class="grid grid-cols-1 gap-6 mt-6 md:grid-cols-3 lg:gap-12">
           <CardHero text='Sala exclusiva no Meet com vagas limitadas' icon={Video} />
           <CardHero text='Dia 10 de maio das 10 às 18hs' icon={Calendar} />
           <CardHero text='6 horas de conteúdo inédito, prático e imersivo' icon={MonitorPlay} />
         </div>
       </div>
 
-      <div class='relative max-w-lg md:w-1/2'>
+      <div class='relative flex items-center justify-center max-w-lg md:w-1/2'>
         <div class='absolute inset-0 z-0 scale-110 bg-purple-500 rounded-full blur-2xl opacity-20'>
         </div>
         <img
