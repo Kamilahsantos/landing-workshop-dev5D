@@ -1,12 +1,10 @@
 ---
-import { MotionSection } from '@/components/ui';
-import { Image } from 'astro:assets';
-import { MainButton } from '@/components/ui';
+import { MainButton, MotionSection } from '@/components/ui';
 ---
 
 <MotionSection client:visible>
   <section class='px-6 py-20'>
-    <div class='flex flex-col items-center justify-center max-w-3xl gap-10 mx-auto text-center'>
+    <div class='flex flex-col items-center justify-center max-w-6xl gap-16 mx-auto text-center'>
       <div class='flex flex-col gap-2'>
         <h2 class='heading-section'>Quem vai te orientar</h2>
         <p class='max-w-xl mx-auto body-text text-muted-foreground'>
@@ -14,53 +12,48 @@ import { MainButton } from '@/components/ui';
         </p>
       </div>
 
-      <div class='relative w-40 h-40'>
-        <div class='absolute inset-0 scale-110 bg-purple-500 rounded-full opacity-30 blur-2xl'>
+      <div class='grid items-center grid-cols-1 gap-12 lg:grid-cols-2 text-justify lg:text-left'>
+        <div class='relative flex items-center justify-center w-full max-w-md mx-auto lg:mx-0'>
+          <div class='absolute inset-0 scale-110 bg-purple-500 rounded-full opacity-30 blur-2xl'>
+          </div>
+          <img
+            src='https://avatars.githubusercontent.com/u/32311268?v=4'
+            alt='Kamila Santos'
+            class='relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-zinc-800'
+            width='379'
+            height='379'
+            loading='lazy'
+          />
         </div>
-        <!-- <Image
-          src="https://avatars.githubusercontent.com/u/32311268?v=4"
-          alt="Kamila Santos"
-          class="relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-zinc-800"
-          width={379}
-          height={379}
-        /> -->
-        <img
-          src='https://avatars.githubusercontent.com/u/32311268?v=4'
-          alt='Kamila Santos'
-          class='relative z-10 object-cover w-full h-full border-4 rounded-full shadow-2xl border-zinc-800'
-        />
+
+        <div class='flex flex-col justify-center gap-6'>
+          <blockquote class='text-sm italic leading-relaxed text-zinc-300 text-center lg:text-left'>
+            "Acredito de verdade que todo dev pode construir uma carreira de impacto, desde que
+            tenha clareza, estratégia e alguém que já percorreu esse caminho ao lado."
+          </blockquote>
+
+          <p class='body-text text-muted-foreground'>
+            Com mais de <strong class='font-semibold text-white'>10 anos de estrada</strong> no desenvolvimento
+            de software, atuei em projetos nacionais e internacionais, ajudando centenas de profissionais
+            a conquistar promoções, viradas de carreira e se posicionar com autoridade. Criadora do método
+            <strong class='font-semibold text-white'>PSH</strong>, mostro como chegar à senioridade
+            em até 5 anos — com estratégia, clareza e foco no que realmente importa.
+          </p>
+
+          <div class='flex flex-col mt-4 gap-1'>
+            <p class='text-lg font-bold text-white'>Kamila Santos</p>
+            <p class='small-text text-muted-foreground'>
+              Mentora de Carreira e Posicionamento para Devs
+            </p>
+          </div>
+
+          <div class='mt-6'>
+            <MainButton href='#pillars-section'>
+              <span class='button-text'>Quero virar dev sênior mais rápido</span>
+            </MainButton>
+          </div>
+        </div>
       </div>
-
-      <blockquote class='text-lg italic leading-relaxed text-zinc-300'>
-        "Acredito de verdade que todo dev pode construir uma carreira de impacto — desde que tenha
-        clareza, estratégia e alguém que já percorreu esse caminho ao lado." <br /> Kamila Santos Mentora
-        de Carreira e Posicionamento para Devs
-      </blockquote>
-
-      <p class='max-w-xl mx-auto body-text text-muted-foreground'>
-        Com mais de <b>
-          10 anos de estrada no desenvolvimento de software, já atuei em projetos no Brasil e fora
-          dele, e hoje dedico minha carreira a ajudar devs como você a encurtarem o caminho rumo à
-          senioridade.
-        </b> Ao longo dos anos, já ajudei centenas de profissionais a se posicionarem com autoridade
-        no mercado, conquistarem promoções, virarem a chave da estagnação e alcançarem cargos que antes
-        pareciam distantes. Criei o método PSH para te mostrar que dá, sim, pra sair do júnior e chegar
-        ao especialista em até 5 anos — de forma estratégica, com clareza e sem se perder no excesso
-        de informação que só atrasa o processo. Se você está pronto(a) para acelerar sua carreira e jogar
-        o jogo como um profissional de alto nível, estou aqui pra te mostrar o caminho.
-      </p>
-
-      <div class='flex flex-col gap-1 mt-8'>
-        <p class='text-lg font-bold text-white'>Kamila Santos</p>
-        <p class='small-text text-muted-foreground'>
-          Mentora de Carreira e Posicionamento para Devs
-        </p>
-      </div>
-    </div>
-    <div class='mt-6'>
-      <MainButton href='#pillars-section'>
-        <span class='button-text'>Quero virar dev sênior mais rápido</span>
-      </MainButton>
     </div>
   </section>
 </MotionSection>
